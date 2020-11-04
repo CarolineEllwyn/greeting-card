@@ -1,94 +1,86 @@
 <!doctype html>
 <html lang="en">
-  <head>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <style>
+    p {
+      text-align: center;
+    }
 
+    h3 {
+      text-align: center;
+    }
+  </style>
+  <script src="index.js"></script>
+</head>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-    <style>
-
-        p {text-align: center;}
-        h3 {text-align: center;}
-
-
-        
-
-        </style>
-
-        <script src="index.js"></script>
-  </head>
-  <body>
-    <div style="width: fit-content; align-items: center;">
-            <div>          
-                <h3>Create your own Greeting card!</h3>
-            </div>
-            <br>
-
-
-
-          <form>
-            <div class="form-group">
-                <textarea class="form-control" id="textAreaId" name="message" onchange="messageFunction(this.value)">Write a message here...</textarea>
-              </div>
-          </form>
-
-<br>
-          <div class="container">
-            <div class="row">
-              <div class="col-sm">
-                <select class="custom-select mr-sm-2" id="comboBackground" onchange="changeBackgroundColor()">
-                    <option selected>Color</option>
-                    <option value="1">Blue</option>
-                    <option value="2">Red</option>
-                    <option value="3">Grey</option>
-
-                  </select>
-              </div>
-              <div class="col-sm">
-                <select class="custom-select mr-sm-2" id="comboFont">
-                    <option selected>Fontcolor</option>
-                    <option value="1">White</option>
-                    <option value="2">Black</option>
-                  </select>
-              </div>
-              <div class="col-sm">
-                <select class="custom-select mr-sm-2" id="comboFont">
-                    <option selected>Font</option>
-                    <option value="1">Arial</option>
-                    <option value="2">Serif</option>
-                  </select>
-              </div>
-              <div class="col-sm">
-                <select class="custom-select mr-sm-2" id="comboFont">
-                    <option selected>Fontsize</option>
-                    <option value="1">Small</option>
-                    <option value="2">Medium</option>
-                    <option value="3">Large</option>
-                  </select>
-              </div>
-            </div>
-          </div>
-          <br>
-
-
-
-
-
- 
-    <div class="card text-black  mb-3" id="finalForm" style="width: 575px; height: 412px;" >
-        <div class="card-body">
-          <p class="card-text" id="printedMessage"></p>
-         
-      </div>
-      </div>
-
+<body>
+  <div style="width: fit-content; align-items: center;">
+    <div>
+      <h3>Create your own Greeting card!</h3>
     </div>
+    <br>
+    <form>
+      <div class="form-group">
+        <textarea class="form-control" id="textAreaId" name="message"
+          onchange="messageFunction(this.value)">Write a message here...</textarea>
+      </div>
+    </form>
+    <br>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+          <select class="custom-select mr-sm-2" id="comboBackground" onchange="changeBackgroundColor()">
+            <option selected>Color</option>
+            <option value="1">Blue</option>
+            <option value="2">Red</option>
+            <option value="3">Grey</option>
+          </select>
+        </div>
+        <div class="col-sm">
+          <select class="custom-select mr-sm-2" id="comboFont">
+            <option selected>Fontcolor</option>
+            <option value="1">White</option>
+            <option value="2">Black</option>
+          </select>
+        </div>
+        <div class="col-sm">
+          <select class="custom-select mr-sm-2" id="comboFont">
+            <option selected>Font</option>
+            <option value="1">Arial</option>
+            <option value="2">Serif</option>
+          </select>
+        </div>
+        <div class="col-sm">
+          <select class="custom-select mr-sm-2" id="comboFont">
+            <option selected>Fontsize</option>
+            <option value="1">Small</option>
+            <option value="2">Medium</option>
+            <option value="3">Large</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="card text-black  mb-3" id="finalForm" style="width: 575px; height: 412px;">
+      <div class="card-body">
+        <p class="card-text" id="printedMessage"></p>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+</body>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  </body>
 </html>
